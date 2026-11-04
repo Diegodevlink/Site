@@ -26,7 +26,6 @@ html {
 }
 
 body {
-  /* Fundo escuro com pontos luminosos simulando um céu cósmico */
   margin: 0;
   background-color: var(--preto);
   background-image:
@@ -40,10 +39,6 @@ body {
   font: 1.0625rem/1.65 var(--sans);
 }
 
-/* --------------------------------------------------
-   Tipografia base e elementos globais
-   Define a aparência dos títulos, parágrafos e botões.
--------------------------------------------------- */
 h1,
 h2,
 h3 {
@@ -76,13 +71,11 @@ svg {
 }
 
 .wrap {
-  /* Limita a largura do conteúdo em telas grandes */
   width: min(1120px, 92%);
   margin-inline: auto;
 }
 
 .block {
-  /* Espaço entre seções principais da página */
   padding: 3rem 0 1rem;
 }
 
@@ -218,10 +211,10 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* --------------------------------------------------
-   Hero e capa inicial
-   Organiza a apresentação principal com texto e ilustração.
--------------------------------------------------- */
+/* ==================================================
+   ABA PRINCIPAL / INÍCIO
+   Estilo da capa principal da página e da introdução.
+================================================== */
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -289,21 +282,10 @@ h3 {
   border-radius: 50%;
 }
 
-.p1 {
-  background: #c9b8a6;
-}
-
-.p2 {
-  background: #e8c27a;
-}
-
-.p3 {
-  background: var(--ion);
-}
-
-.p4 {
-  background: #e0775a;
-}
+.p1 { background: #c9b8a6; }
+.p2 { background: #e8c27a; }
+.p3 { background: var(--ion); }
+.p4 { background: #e0775a; }
 
 @keyframes gira {
   to {
@@ -311,10 +293,6 @@ h3 {
   }
 }
 
-/* --------------------------------------------------
-   Cartões e grades de conteúdo
-   Cria layouts em colunas para artigos, cards e blocos de informação.
--------------------------------------------------- */
 .three,
 .grid {
   display: grid;
@@ -349,10 +327,6 @@ h3 {
   margin-bottom: 1rem;
 }
 
-/* --------------------------------------------------
-   Seção de história e linha do tempo
-   Cria o painel de evolução do conceito astronômico.
--------------------------------------------------- */
 .history {
   display: grid;
   grid-template-columns: 340px 1fr;
@@ -412,10 +386,6 @@ h3 {
   color: var(--suave);
 }
 
-/* --------------------------------------------------
-   Bloco de curiosidade
-   Destaca uma informação interessante com estilo visual diferente.
--------------------------------------------------- */
 .fact {
   background: var(--painel);
   border-left: 5px solid var(--ion);
@@ -429,10 +399,6 @@ h3 {
   font: 1.4rem/1.45 var(--serif);
 }
 
-/* --------------------------------------------------
-   Seção de caminhos de carreira
-   Organiza oportunidades de estudo e profissão relacionadas à astronomia.
--------------------------------------------------- */
 .paths {
   margin-top: 4rem;
   padding: 4rem 0;
@@ -450,10 +416,10 @@ h3 {
   font-size: 0.98rem;
 }
 
-/* --------------------------------------------------
-   Comparação dos planetas
-   Exibe os planetas em linha e ajusta tamanho e aparência visual.
--------------------------------------------------- */
+/* ==================================================
+   ABA DOS PLANETAS
+   Estilo visual da seção que compara os planetas do Sistema Solar.
+================================================== */
 .lineup {
   display: flex;
   align-items: flex-end;
@@ -498,10 +464,10 @@ h3 {
   color: var(--suave);
 }
 
-/* --------------------------------------------------
-   Seção de estrelas
-   Define os cards explicativos sobre a vida e temperatura das estrelas.
--------------------------------------------------- */
+/* ==================================================
+   ABA DO SOL
+   Estilo da seção dedicada à estrela central do sistema, incluindo fases e temperatura.
+================================================== */
 .life {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -573,10 +539,10 @@ h3 {
   font-size: 0.9rem;
 }
 
-/* --------------------------------------------------
-   Buracos negros
-   Estiliza a ilustração central com fundo escuro e brilho infernal.
--------------------------------------------------- */
+/* ==================================================
+   ABA DOS BURACOS NEGROS
+   Estilo da seção dedicada à gravidade extrema e ilustracões do espaço.
+================================================== */
 .bh {
   width: min(100%, 640px);
   background: radial-gradient(ellipse at center, #1a0f08, #000 70%);
@@ -584,10 +550,6 @@ h3 {
   border-radius: 10px;
 }
 
-/* --------------------------------------------------
-   Rodapé final
-   Dá fechamento ao site com identidade visual da revista.
--------------------------------------------------- */
 .footer {
   margin-top: 4rem;
   border-top: 1px solid var(--linha);
@@ -610,10 +572,6 @@ h3 {
   opacity: 0.7;
 }
 
-/* --------------------------------------------------
-   Ajustes responsivos
-   Redefine grids e layouts para telas menores.
--------------------------------------------------- */
 @media (max-width: 900px) {
   .hero,
   .history {

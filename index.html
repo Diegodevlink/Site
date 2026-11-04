@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <!--
+    Cabeça do documento: define o idioma, a página, fontes externas
+    e o link para o arquivo de estilo principal.
+  -->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Órbita — revista de astronomia e tecnologia</title>
+    <title>Astro Curiosity - Revista de Astronomia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,6 +18,10 @@
   </head>
 
   <body>
+    <!--
+      Cabeçalho fixo da revista com nome e navegação por abas.
+      As abas controlam a troca entre as seções principais da página.
+    -->
     <header class="top">
       <div class="wrap bar">
         <a class="logo" href="#inicio">Astro Curiosity</a>
@@ -28,8 +36,17 @@
     </header>
 
     <main>
+      <!--
+        Conteúdo principal da página, organizado em seções.
+        Cada section representa uma área do site: início, planetas, estrelas e buracos negros.
+      -->
+
       <!-- ================= INÍCIO ================= -->
       <section id="inicio" class="panel" role="tabpanel">
+        <!--
+          Hero principal da página inicial: título, introdução e ilustração.
+          Esse bloco funciona como apresentação visual da revista.
+        -->
         <div class="hero wrap">
           <div>
             <p class="issue">Bem vindos à Astro Curiosity!</p>
@@ -61,6 +78,10 @@
           </div>
         </div>
 
+        <!--
+          Seção de cards: apresenta os principais temas da astronomia.
+          Cada article funciona como um bloco informativo com ícone e texto.
+        -->
         <div class="wrap block">
           <h2>O que a astronomia estuda</h2>
 
@@ -106,6 +127,10 @@
           </div>
         </div>
 
+        <!--
+          História da astronomia em duas colunas: uma com ilustrações de modelos
+          e outra com a linha do tempo dos principais marcos históricos.
+        -->
         <div class="wrap block">
           <h2>Como o conceito nasceu</h2>
           <p class="intro">
@@ -187,6 +212,10 @@
           </div>
         </div>
 
+        <!--
+          Caixa de curiosidade com uma frase destacada e botão para trocar o conteúdo.
+          Esse bloco é dinâmico e é alterado por JavaScript.
+        -->
         <div class="wrap block">
           <h2>Você sabia?</h2>
 
@@ -199,6 +228,10 @@
           </div>
         </div>
 
+        <!--
+          Seção final da página inicial com sugestões de áreas acadêmicas e profissionais.
+          Essa parte ajuda a conectar o conteúdo com possíveis caminhos de estudo.
+        -->
         <div class="paths">
           <div class="wrap">
             <h2>Gostou? Dá para transformar curiosidade em carreira.</h2>
@@ -234,6 +267,10 @@
 
       <!-- ================= PLANETAS ================= -->
       <section id="planetas" class="panel" role="tabpanel" hidden>
+        <!--
+          Seção dos planetas: apresenta os oito mundos do Sistema Solar
+          e suas principais características em cards informativos.
+        -->
         <div class="wrap block">
           <p class="issue">Sistema Solar</p>
           <h1>Planetas</h1>
@@ -323,6 +360,9 @@
 
       <!-- ================= ESTRELAS ================= -->
       <section id="estrelas" class="panel" role="tabpanel" hidden>
+        <!--
+          Seção de estrelas: explica a formação, a temperatura e as fases da vida estelar.
+        -->
         <div class="wrap block">
           <p class="issue">Fábricas de luz</p>
           <h1>Estrelas</h1>
@@ -393,6 +433,10 @@
 
       <!-- ================= BURACOS NEGROS ================= -->
       <section id="buracos" class="panel" role="tabpanel" hidden>
+        <!--
+          Seção de buracos negros: apresenta a ilustração e explicações sobre
+          gravidade extrema, horizonte de eventos e fenômenos relacionados.
+        -->
         <div class="wrap block">
           <p class="issue">Gravidade extrema</p>
           <h1>Buracos negros</h1>
@@ -455,6 +499,10 @@
       </section>
     </main>
 
+    <!--
+      Rodapé final da página, responsável por fechar a identidade visual da revista.
+      Também encerra a experiência com marca e direitos reservados.
+    -->
     <footer class="footer">
       <div class="wrap">
         <strong>Órbita</strong>
@@ -463,44 +511,13 @@
       </div>
     </footer>
 
-    <script>
-      const tabs = document.querySelectorAll("[data-tab]");
-      const panels = document.querySelectorAll(".panel");
-
-      function abrir(id, empurrar = true) {
-        if (!document.getElementById(id)) id = "inicio";
-        panels.forEach((p) => (p.hidden = p.id !== id));
-        tabs.forEach((t) => t.setAttribute("aria-selected", t.dataset.tab === id));
-        if (empurrar) history.replaceState(null, "", "#" + id);
-        window.scrollTo({ top: 0 });
-      }
-
-      tabs.forEach((t) => t.addEventListener("click", () => abrir(t.dataset.tab)));
-      document
-        .querySelectorAll("[data-go]")
-        .forEach((b) => b.addEventListener("click", () => abrir(b.dataset.go)));
-      document
-        .querySelector(".logo")
-        .addEventListener("click", (e) => {
-          e.preventDefault();
-          abrir("inicio");
-        });
-      abrir(location.hash.slice(1) || "inicio", false);
-
-      const fatos = [
-        "A luz do Sol leva cerca de 8 minutos e 20 segundos para chegar até a Terra. Você vê o Sol como ele era há pouco mais de 8 minutos.",
-        "Existem mais estrelas no universo observável do que grãos de areia em todas as praias da Terra, segundo estimativas de astrônomos.",
-        "O computador que ajudou a levar astronautas à Lua na missão Apollo 11 tinha cerca de 4 KB de memória RAM.",
-        "A sonda Voyager 1, lançada em 1977, ainda envia dados de mais de 24 bilhões de quilômetros daqui.",
-        "Um qubit, a unidade dos computadores quânticos, pode estar em uma combinação de 0 e 1 ao mesmo tempo.",
-        "O GPS só é preciso porque os engenheiros corrigem o efeito da relatividade de Einstein no tempo dos satélites."
-      ];
-
-      let n = 0;
-      document.getElementById("fact-btn").addEventListener("click", () => {
-        n = (n + 1) % fatos.length;
-        document.getElementById("fact-text").textContent = fatos[n];
-      });
-    </script>
+    <!--
+      Script de navegação e interatividade:
+      - alterna entre as abas
+      - mostra/oculta as seções por painel
+      - navega com o hash da URL
+      - troca a curiosidade exibida ao clicar no botão
+    -->
+    <script src="script.js"></script>
   </body>
 </html>
