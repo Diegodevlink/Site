@@ -1,0 +1,74 @@
+/* ==================================================
+   ABA DAS ESTRELAS
+   Estilo da seção dedicada às estrelas, fases e temperatura.
+================================================== */
+.life {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.life div {
+  background: var(--painel);
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.6rem;
+  justify-items: start;
+}
+
+.life b {
+  font: 700 1.2rem var(--serif);
+}
+
+.life p {
+  color: var(--suave);
+  font-size: 0.95rem;
+}
+
+.life i {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: block;
+}
+
+.neb {
+  background: radial-gradient(circle, #c084fc99, #4cc9e044 55%, transparent 72%);
+  filter: blur(2px);
+}
+
+.star {
+  background: radial-gradient(circle at 35% 35%, #fff3b0, var(--sol));
+  box-shadow: 0 0 28px 6px #f5b82e66;
+}
+
+.giant {
+  background: radial-gradient(circle at 35% 35%, #ff9b7a, #c8341f);
+  box-shadow: 0 0 30px 8px #c8341f66;
+}
+
+.dwarf {
+  width: 30px !important;
+  height: 30px !important;
+  margin: 20px;
+  background: #eaf6ff;
+  box-shadow: 0 0 22px 6px #8fd3ff99;
+}
+
+.temp {
+  height: 26px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff5a3c, #ffb347, #fff1a8, #cfe6ff, #6f9bff);
+}
+
+.temp__lbl {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+  color: var(--suave);
+  font-size: 0.9rem;
+}

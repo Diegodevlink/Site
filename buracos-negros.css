@@ -1,0 +1,10 @@
+/* ==================================================
+   ABA DOS BURACOS NEGROS
+   Estilo da seção dedicada à gravidade extrema e ilustrações cósmicas.
+================================================== */
+.bh {
+  width: min(100%, 640px);
+  background: radial-gradient(ellipse at center, #1a0f08, #000 70%);
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+}
