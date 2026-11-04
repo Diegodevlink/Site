@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Órbita — revista de astronomia e tecnologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Public+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="logo" href="#inicio">Órbita</a>
+
+        <div class="tabs" role="tablist" aria-label="Seções da revista">
+          <button role="tab" data-tab="inicio" aria-selected="true">Início</button>
+          <button role="tab" data-tab="planetas" aria-selected="false">Planetas</button>
+          <button role="tab" data-tab="estrelas" aria-selected="false">Estrelas</button>
+          <button role="tab" data-tab="buracos" aria-selected="false">Buracos negros</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= INÍCIO ================= -->
+      <section id="inicio" class="panel" role="tabpanel">
+        <div class="hero wrap">
+          <div>
+            <p class="issue">Edição nº 1 · Novembro de 2026</p>
+            <h1>O que é astronomia?</h1>
+            <p class="lede">
+              É a ciência que estuda tudo o que existe além da Terra: planetas, estrelas,
+              galáxias e o próprio universo, desde o nascimento até o futuro dele. Ela
+              observa, mede e usa matemática, física e tecnologia para responder perguntas
+              que a humanidade faz desde sempre.
+            </p>
+
+            <div class="chips">
+              <button class="btn" data-go="planetas">Ver planetas</button>
+              <button class="btn btn--line" data-go="estrelas">Ver estrelas</button>
+              <button class="btn btn--line" data-go="buracos">Ver buracos negros</button>
+            </div>
+          </div>
+
+          <div
+            class="orbit"
+            role="img"
+            aria-label="Ilustração do Sistema Solar com planetas girando ao redor do Sol"
+          >
+            <span class="sun"></span>
+            <span class="ring r1"><i class="pl p1"></i></span>
+            <span class="ring r2"><i class="pl p2"></i></span>
+            <span class="ring r3"><i class="pl p3"></i></span>
+            <span class="ring r4"><i class="pl p4"></i></span>
+          </div>
+        </div>
+
+        <div class="wrap block">
+          <h2>O que a astronomia estuda</h2>
+
+          <div class="three">
+            <article class="card">
+              <svg viewBox="0 0 120 80" aria-hidden="true">
+                <circle cx="60" cy="40" r="14" fill="#f5b82e" />
+                <circle cx="60" cy="40" r="30" fill="none" stroke="#4cc9e0" stroke-dasharray="3 4" />
+                <circle cx="90" cy="40" r="5" fill="#4cc9e0" />
+              </svg>
+              <h3>Nossa vizinhança</h3>
+              <p>O Sol, os planetas, as luas, os cometas e os asteroides que formam o Sistema Solar.</p>
+            </article>
+
+            <article class="card">
+              <svg viewBox="0 0 120 80" aria-hidden="true">
+                <g fill="#fff">
+                  <circle cx="20" cy="20" r="2" />
+                  <circle cx="55" cy="55" r="3" />
+                  <circle cx="85" cy="25" r="2.5" />
+                  <circle cx="100" cy="60" r="2" />
+                  <circle cx="40" cy="30" r="1.5" />
+                </g>
+                <path
+                  d="M20 20L40 30L55 55L100 60M40 30L85 25"
+                  stroke="#4cc9e0"
+                  stroke-width=".8"
+                  fill="none"
+                />
+              </svg>
+              <h3>Estrelas e galáxias</h3>
+              <p>Como as estrelas nascem, brilham e morrem, e como bilhões delas se reúnem em galáxias.</p>
+            </article>
+
+            <article class="card">
+              <svg viewBox="0 0 120 80" aria-hidden="true">
+                <ellipse cx="60" cy="40" rx="45" ry="12" fill="none" stroke="#f5b82e" stroke-width="3" />
+                <circle cx="60" cy="40" r="11" fill="#000" stroke="#fff" stroke-width="1" />
+              </svg>
+              <h3>O universo inteiro</h3>
+              <p>Sua origem, sua expansão e fenômenos extremos, como os buracos negros.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="wrap block">
+          <h2>Como o conceito nasceu</h2>
+          <p class="intro">
+            A palavra vem do grego: <em>astron</em> significa estrela e <em>nomos</em>, lei ou regra.
+            Astronomia é, literalmente, “as leis das estrelas”. Antes de existir o nome, povos antigos
+            já olhavam para o céu para marcar o tempo, plantar e navegar.
+          </p>
+
+          <div class="history">
+            <figure class="models">
+              <svg viewBox="0 0 160 110" role="img" aria-label="Modelo com a Terra no centro">
+                <circle cx="80" cy="55" r="9" fill="#4cc9e0" />
+                <circle cx="80" cy="55" r="26" fill="none" stroke="#777" stroke-dasharray="2 3" />
+                <circle cx="80" cy="55" r="44" fill="none" stroke="#777" stroke-dasharray="2 3" />
+                <circle cx="106" cy="55" r="5" fill="#f5b82e" />
+                <circle cx="46" cy="38" r="4" fill="#ddd" />
+              </svg>
+              <figcaption>Modelo geocêntrico: a Terra no centro.</figcaption>
+
+              <svg viewBox="0 0 160 110" role="img" aria-label="Modelo com o Sol no centro">
+                <circle cx="80" cy="55" r="11" fill="#f5b82e" />
+                <circle cx="80" cy="55" r="28" fill="none" stroke="#777" stroke-dasharray="2 3" />
+                <circle cx="80" cy="55" r="46" fill="none" stroke="#777" stroke-dasharray="2 3" />
+                <circle cx="108" cy="55" r="5" fill="#4cc9e0" />
+                <circle cx="44" cy="30" r="4" fill="#e0775a" />
+              </svg>
+              <figcaption>Modelo heliocêntrico: o Sol no centro.</figcaption>
+            </figure>
+
+            <ol class="timeline">
+              <li>
+                <b>Antiguidade</b>
+                <p>
+                  Babilônios e egípcios registram os movimentos do céu e criam calendários para as
+                  colheitas e as cheias dos rios.
+                </p>
+              </li>
+              <li>
+                <b>Grécia antiga</b>
+                <p>
+                  Surge a ideia de explicar o céu com razão e geometria, e nasce a palavra “astronomia”.
+                  Aristarco chega a propor o Sol no centro, mas a ideia não vinga.
+                </p>
+              </li>
+              <li>
+                <b>Século II</b>
+                <p>Ptolomeu organiza o modelo com a Terra no centro, usado por mais de mil anos.</p>
+              </li>
+              <li>
+                <b>1543</b>
+                <p>Copérnico publica o modelo com o Sol no centro e abre a revolução científica.</p>
+              </li>
+              <li>
+                <b>1609</b>
+                <p>
+                  Galileu aponta um telescópio para o céu e vê luas ao redor de Júpiter e as fases de
+                  Vênus.
+                </p>
+              </li>
+              <li>
+                <b>1687</b>
+                <p>Newton explica o movimento dos astros com a lei da gravitação.</p>
+              </li>
+              <li>
+                <b>Século XX</b>
+                <p>
+                  Hubble mostra que existem outras galáxias e que o universo se expande. Em 1957, o
+                  Sputnik inaugura a era espacial.
+                </p>
+              </li>
+              <li>
+                <b>Hoje</b>
+                <p>
+                  Telescópios espaciais como o James Webb e computadores poderosos analisam dados de
+                  bilhões de objetos.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="wrap block">
+          <h2>Você sabia?</h2>
+
+          <div class="fact">
+            <p id="fact-text" aria-live="polite">
+              A luz do Sol leva cerca de 8 minutos e 20 segundos para chegar até a Terra. Você vê o
+              Sol como ele era há pouco mais de 8 minutos.
+            </p>
+            <button class="btn" id="fact-btn" type="button">Outra curiosidade</button>
+          </div>
+        </div>
+
+        <div class="paths">
+          <div class="wrap">
+            <h2>Gostou? Dá para transformar curiosidade em carreira.</h2>
+
+            <div class="three">
+              <article>
+                <h3>Para quem ama o céu</h3>
+                <p>
+                  Astronomia, Física e Engenharia Aeroespacial. Comece pela Olimpíada Brasileira de
+                  Astronomia e Astronáutica (OBA).
+                </p>
+              </article>
+
+              <article>
+                <h3>Para quem ama criar</h3>
+                <p>
+                  Análise e Desenvolvimento de Sistemas, Ciência da Computação e cursos técnicos de
+                  Informática. Programar conecta tudo o que você leu aqui.
+                </p>
+              </article>
+
+              <article>
+                <h3>Para quem ama números</h3>
+                <p>
+                  Matemática, Estatística e Ciência de Dados. É com análise de dados que telescópios e
+                  satélites viram descobertas.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PLANETAS ================= -->
+      <section id="planetas" class="panel" role="tabpanel" hidden>
+        <div class="wrap block">
+          <p class="issue">Sistema Solar</p>
+          <h1>Planetas</h1>
+          <p class="lede">
+            São oito planetas girando ao redor do Sol: quatro rochosos perto dele e quatro gigantes
+            mais distantes. Veja como eles se comparam em tamanho.
+          </p>
+
+          <div class="lineup" role="img" aria-label="Comparação de tamanho dos oito planetas">
+            <div><i style="--s:3px; --c:#b5a99a"></i><span>Mercúrio</span></div>
+            <div><i style="--s:8px; --c:#e8c27a"></i><span>Vênus</span></div>
+            <div><i style="--s:8px; --c:#4a90d9"></i><span>Terra</span></div>
+            <div><i style="--s:4px; --c:#e0775a"></i><span>Marte</span></div>
+            <div><i style="--s:90px; --c:#d9a066"></i><span>Júpiter</span></div>
+            <div><i class="sat" style="--s:75px; --c:#e3cf9a"></i><span>Saturno</span></div>
+            <div><i style="--s:32px; --c:#8fe0e8"></i><span>Urano</span></div>
+            <div><i style="--s:31px; --c:#4a63e0"></i><span>Netuno</span></div>
+          </div>
+          <p class="note">Tamanhos proporcionais entre si. As distâncias não estão em escala.</p>
+        </div>
+
+        <div class="wrap block">
+          <div class="grid">
+            <article class="card">
+              <h3>Mercúrio</h3>
+              <p>
+                O menor planeta e o mais próximo do Sol. Dá uma volta em torno dele em apenas 88 dias
+                terrestres.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Vênus</h3>
+              <p>
+                O mais quente, com cerca de 460 °C na superfície. Gira tão devagar que seu dia dura
+                mais que seu ano.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Terra</h3>
+              <p>
+                O único lugar conhecido com vida. Tem água líquida na superfície e uma atmosfera que nos
+                protege.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Marte</h3>
+              <p>
+                Abriga o Olympus Mons, um vulcão com cerca de 22 km de altura, quase três vezes o
+                Everest.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Júpiter</h3>
+              <p>
+                O maior de todos. A Grande Mancha Vermelha é uma tempestade observada há séculos.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Saturno</h3>
+              <p>
+                Famoso pelos anéis de gelo e rocha. Sua densidade média é menor que a da água.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Urano</h3>
+              <p>
+                Gira “deitado”, com o eixo inclinado cerca de 98°, como uma bola rolando em órbita.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Netuno</h3>
+              <p>
+                O mais distante, com ventos que passam de 2.000 km/h, entre os mais rápidos do Sistema
+                Solar.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ESTRELAS ================= -->
+      <section id="estrelas" class="panel" role="tabpanel" hidden>
+        <div class="wrap block">
+          <p class="issue">Fábricas de luz</p>
+          <h1>Estrelas</h1>
+          <p class="lede">
+            Estrelas são esferas gigantes de gás que brilham porque fundem átomos no centro. O Sol é a
+            mais próxima de nós, e a seguinte, Proxima Centauri, está a cerca de 4,2 anos-luz.
+          </p>
+        </div>
+
+        <div class="wrap block">
+          <h2>A vida de uma estrela</h2>
+
+          <div class="life">
+            <div>
+              <i class="neb"></i>
+              <b>Nebulosa</b>
+              <p>Uma nuvem de gás e poeira que se junta pela gravidade.</p>
+            </div>
+
+            <div>
+              <i class="star"></i>
+              <b>Estrela</b>
+              <p>Funde hidrogênio em hélio. O Sol tem cerca de 4,6 bilhões de anos e está na fase estável.</p>
+            </div>
+
+            <div>
+              <i class="giant"></i>
+              <b>Gigante vermelha</b>
+              <p>Quando o hidrogênio acaba, a estrela incha e esfria.</p>
+            </div>
+
+            <div>
+              <i class="dwarf"></i>
+              <b>Anã branca</b>
+              <p>Estrelas como o Sol terminam assim. As muito maiores explodem como supernovas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap block">
+          <h2>A cor revela a temperatura</h2>
+          <div class="temp" role="img" aria-label="Escala de cores das estrelas, da mais fria à mais quente"></div>
+          <div class="temp__lbl">
+            <span>Vermelhas: mais frias</span>
+            <span>Amarelas: como o Sol</span>
+            <span>Azuis: mais quentes</span>
+          </div>
+
+          <div class="grid two">
+            <article class="card">
+              <h3>Betelgeuse</h3>
+              <p>
+                Supergigante vermelha na constelação de Órion. Se ocupasse o lugar do Sol, engoliria as
+                órbitas dos planetas rochosos e passaria de Marte.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Somos poeira de estrelas</h3>
+              <p>
+                Elementos como o carbono e o oxigênio, presentes no seu corpo, foram produzidos dentro de
+                estrelas e espalhados quando elas morreram.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BURACOS NEGROS ================= -->
+      <section id="buracos" class="panel" role="tabpanel" hidden>
+        <div class="wrap block">
+          <p class="issue">Gravidade extrema</p>
+          <h1>Buracos negros</h1>
+          <p class="lede">
+            São regiões do espaço onde a gravidade é tão forte que nem a luz consegue escapar. Muitos se
+            formam quando uma estrela muito grande colapsa no fim da vida.
+          </p>
+
+          <svg class="bh" viewBox="0 0 400 240" role="img" aria-label="Ilustração de um buraco negro com disco de matéria brilhante ao redor">
+            <defs>
+              <radialGradient id="glow">
+                <stop offset="55%" stop-color="#f5b82e" stop-opacity=".9" />
+                <stop offset="100%" stop-color="#e0775a" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <ellipse cx="200" cy="120" rx="185" ry="48" fill="url(#glow)" />
+            <circle cx="200" cy="120" r="52" fill="none" stroke="#ffd27a" stroke-width="3" />
+            <circle cx="200" cy="120" r="48" fill="#000" />
+            <path d="M30 120 Q200 175 370 120" fill="none" stroke="#ffd27a" stroke-width="2" opacity=".8" />
+          </svg>
+          <p class="note">Ilustração artística. O disco é formado por gás que gira em alta velocidade antes de cair.</p>
+        </div>
+
+        <div class="wrap block">
+          <div class="grid">
+            <article class="card">
+              <h3>Horizonte de eventos</h3>
+              <p>
+                É a fronteira sem volta. Quem a cruza não consegue mais sair, porque seria preciso ir mais
+                rápido que a luz.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Não é um aspirador</h3>
+              <p>
+                Se o Sol virasse um buraco negro com a mesma massa, a Terra continuaria em órbita. A
+                gravidade só é extrema muito perto dele.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>As primeiras imagens</h3>
+              <p>
+                Em 2019, o Event Horizon Telescope mostrou o buraco negro da galáxia M87. Em 2022, veio
+                o do centro da Via Láctea, o Sagitário A*, com cerca de 4 milhões de vezes a massa do
+                Sol.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Espaguetificação</h3>
+              <p>
+                Perto de um buraco negro pequeno, a gravidade puxa mais os pés que a cabeça, esticando o
+                objeto como um fio de macarrão.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <strong>Órbita</strong>
+        <p>Revista de divulgação científica. Feita para despertar a curiosidade e incentivar o estudo.</p>
+        <p class="small">© 2026 Órbita. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      const tabs = document.querySelectorAll("[data-tab]");
+      const panels = document.querySelectorAll(".panel");
+
+      function abrir(id, empurrar = true) {
+        if (!document.getElementById(id)) id = "inicio";
+        panels.forEach((p) => (p.hidden = p.id !== id));
+        tabs.forEach((t) => t.setAttribute("aria-selected", t.dataset.tab === id));
+        if (empurrar) history.replaceState(null, "", "#" + id);
+        window.scrollTo({ top: 0 });
+      }
+
+      tabs.forEach((t) => t.addEventListener("click", () => abrir(t.dataset.tab)));
+      document
+        .querySelectorAll("[data-go]")
+        .forEach((b) => b.addEventListener("click", () => abrir(b.dataset.go)));
+      document
+        .querySelector(".logo")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          abrir("inicio");
+        });
+      abrir(location.hash.slice(1) || "inicio", false);
+
+      const fatos = [
+        "A luz do Sol leva cerca de 8 minutos e 20 segundos para chegar até a Terra. Você vê o Sol como ele era há pouco mais de 8 minutos.",
+        "Existem mais estrelas no universo observável do que grãos de areia em todas as praias da Terra, segundo estimativas de astrônomos.",
+        "O computador que ajudou a levar astronautas à Lua na missão Apollo 11 tinha cerca de 4 KB de memória RAM.",
+        "A sonda Voyager 1, lançada em 1977, ainda envia dados de mais de 24 bilhões de quilômetros daqui.",
+        "Um qubit, a unidade dos computadores quânticos, pode estar em uma combinação de 0 e 1 ao mesmo tempo.",
+        "O GPS só é preciso porque os engenheiros corrigem o efeito da relatividade de Einstein no tempo dos satélites."
+      ];
+
+      let n = 0;
+      document.getElementById("fact-btn").addEventListener("click", () => {
+        n = (n + 1) % fatos.length;
+        document.getElementById("fact-text").textContent = fatos[n];
+      });
+    </script>
+  </body>
+</html>
