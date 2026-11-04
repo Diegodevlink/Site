@@ -1,3 +1,8 @@
+/* --------------------------------------------------
+   Tema geral e variáveis visuais do site
+   Aqui ficam as cores, fontes e valores reutilizados
+   em todo o layout.
+-------------------------------------------------- */
 :root {
   --preto: #000;
   --painel: #0d0e16;
@@ -21,8 +26,7 @@ html {
 }
 
 body {
-
-  /* Colocando as linhas do CSS animation para os planetas */
+  /* Fundo escuro com pontos luminosos simulando um céu cósmico */
   margin: 0;
   background-color: var(--preto);
   background-image:
@@ -35,7 +39,11 @@ body {
   color: var(--texto);
   font: 1.0625rem/1.65 var(--sans);
 }
-/* Aplicando as fontes para as tags h1, h2 e h3 */
+
+/* --------------------------------------------------
+   Tipografia base e elementos globais
+   Define a aparência dos títulos, parágrafos e botões.
+-------------------------------------------------- */
 h1,
 h2,
 h3 {
@@ -68,11 +76,13 @@ svg {
 }
 
 .wrap {
+  /* Limita a largura do conteúdo em telas grandes */
   width: min(1120px, 92%);
   margin-inline: auto;
 }
 
 .block {
+  /* Espaço entre seções principais da página */
   padding: 3rem 0 1rem;
 }
 
@@ -119,7 +129,10 @@ h3 {
   margin-top: 0.8rem;
 }
 
-/* Cabeçalho e abas */
+/* --------------------------------------------------
+   Cabeçalho e navegação por abas
+   Mantém o topo fixo e os botões de seção visíveis.
+-------------------------------------------------- */
 .top {
   position: sticky;
   top: 0;
@@ -171,7 +184,10 @@ h3 {
   font-weight: 600;
 }
 
-/* Botões */
+/* --------------------------------------------------
+   Botões e ações principais
+   Estiliza os botões de CTA e os grupos de chips.
+-------------------------------------------------- */
 .btn {
   background: var(--sol);
   color: #000;
@@ -202,7 +218,10 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Capa */
+/* --------------------------------------------------
+   Hero e capa inicial
+   Organiza a apresentação principal com texto e ilustração.
+-------------------------------------------------- */
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -292,7 +311,10 @@ h3 {
   }
 }
 
-/* Cartões e grades */
+/* --------------------------------------------------
+   Cartões e grades de conteúdo
+   Cria layouts em colunas para artigos, cards e blocos de informação.
+-------------------------------------------------- */
 .three,
 .grid {
   display: grid;
@@ -327,7 +349,10 @@ h3 {
   margin-bottom: 1rem;
 }
 
-/* História */
+/* --------------------------------------------------
+   Seção de história e linha do tempo
+   Cria o painel de evolução do conceito astronômico.
+-------------------------------------------------- */
 .history {
   display: grid;
   grid-template-columns: 340px 1fr;
@@ -387,7 +412,10 @@ h3 {
   color: var(--suave);
 }
 
-/* Você sabia */
+/* --------------------------------------------------
+   Bloco de curiosidade
+   Destaca uma informação interessante com estilo visual diferente.
+-------------------------------------------------- */
 .fact {
   background: var(--painel);
   border-left: 5px solid var(--ion);
@@ -401,7 +429,10 @@ h3 {
   font: 1.4rem/1.45 var(--serif);
 }
 
-/* Caminhos */
+/* --------------------------------------------------
+   Seção de caminhos de carreira
+   Organiza oportunidades de estudo e profissão relacionadas à astronomia.
+-------------------------------------------------- */
 .paths {
   margin-top: 4rem;
   padding: 4rem 0;
@@ -419,7 +450,10 @@ h3 {
   font-size: 0.98rem;
 }
 
-/* Planetas */
+/* --------------------------------------------------
+   Comparação dos planetas
+   Exibe os planetas em linha e ajusta tamanho e aparência visual.
+-------------------------------------------------- */
 .lineup {
   display: flex;
   align-items: flex-end;
@@ -464,7 +498,10 @@ h3 {
   color: var(--suave);
 }
 
-/* Estrelas */
+/* --------------------------------------------------
+   Seção de estrelas
+   Define os cards explicativos sobre a vida e temperatura das estrelas.
+-------------------------------------------------- */
 .life {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -536,7 +573,10 @@ h3 {
   font-size: 0.9rem;
 }
 
-/* Buracos negros */
+/* --------------------------------------------------
+   Buracos negros
+   Estiliza a ilustração central com fundo escuro e brilho infernal.
+-------------------------------------------------- */
 .bh {
   width: min(100%, 640px);
   background: radial-gradient(ellipse at center, #1a0f08, #000 70%);
@@ -544,7 +584,10 @@ h3 {
   border-radius: 10px;
 }
 
-/* Rodapé */
+/* --------------------------------------------------
+   Rodapé final
+   Dá fechamento ao site com identidade visual da revista.
+-------------------------------------------------- */
 .footer {
   margin-top: 4rem;
   border-top: 1px solid var(--linha);
@@ -567,7 +610,10 @@ h3 {
   opacity: 0.7;
 }
 
-/* Responsivo */
+/* --------------------------------------------------
+   Ajustes responsivos
+   Redefine grids e layouts para telas menores.
+-------------------------------------------------- */
 @media (max-width: 900px) {
   .hero,
   .history {
