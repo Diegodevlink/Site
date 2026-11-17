@@ -222,7 +222,7 @@ h3 {
   inset: 42%;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #ffe08a, var(--sol));
-  box-shadow: 0 0 50px 12px #f5b82e66;
+  box-shadow: 0 0 50px 12px #f5b82e66, inset -10px -12px 18px rgba(111, 69, 0, 0.35);
 }
 
 .ring {
@@ -267,6 +267,7 @@ h3 {
   height: 16px;
   margin-left: -8px;
   border-radius: 50%;
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.22), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .p1 { background: #c9b8a6; }
